@@ -1,0 +1,17 @@
+/* styles.css */
+
+/* Add your additional styling here */
+
+/* Example: Change the color of the header */
+header {
+    text-align: center;
+    background-color: #00bcd4; /* Cyan color for the header background */
+    padding: 1em;
+}
+
+/* Example: Style the fun content section */
+.fun-content {
+    border: 2px solid #00bcd4; /* Cyan border for the fun content section */
+    padding: 1em;
+    border-radius: 10px;
+}
