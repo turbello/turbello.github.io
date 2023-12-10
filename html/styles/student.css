@@ -1,0 +1,206 @@
+/********** INFORMATION ***********
+* Created by: [Je eigen naam]
+* Created at: 07/12/2023
+* Updated at: 07/12/2023
+**********************************/
+
+/* Body max 1200 en centraal*/
+body {
+    /* Add background properties */
+    background: url('../content/images/snow.jpg') center center no-repeat;
+    background-size: cover;
+    /* You can use 'contain' if you prefer */
+
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    max-width: 1200px;
+    margin: 0 auto !important;
+    text-align: center;
+    align-items: center;
+}
+
+/* HEADER */
+header {
+    grid-row: 1/2;
+}
+
+.navbar {
+    font-size: 20px;
+    /*mix-blend-mode: color-burn;*/
+}
+
+.navbar-toggler {
+    background-color: rgba(103, 143, 170, 0.3) !important;
+}
+
+/* MAIN */
+main {
+    grid-row: 2/3;
+}
+
+.j-border {
+    border: 5px solid rgb(103, 143, 170);
+}
+
+#carouselExampleAutoplaying {
+    display: flex;
+    align-items: end;
+    justify-self: center;
+    max-height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.j-carousel {
+    max-height: 800px;
+    width: 1200px;
+}
+
+.j-verkoopspraat {
+    font-size: 40px;
+    text-align: start;
+    text-decoration: underline rgb(103, 143, 170);
+}
+
+.j-instock {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 0px !important;
+    width: 100% !important;
+}
+
+.card img {
+    padding: 10px;
+}
+
+.j-koopknop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 10px;
+}
+
+.j-koopknop .btn:hover {
+    background-color: forestgreen;
+    transition: 1s;
+}
+
+
+/* FOOTER */
+footer {
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+footer>section {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer>section>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+footer>section>form>input,
+form>button {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    height: 30px;
+}
+
+footer form button {
+    background-color: gray;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+footer>section img {
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+}
+
+footer>section button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.j-social>a:hover {
+    mix-blend-mode: color-burn;
+}
+
+/* ASIDE off topic */
+.j-hangbal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: auto;
+    z-index: -1;
+}
+
+.j-santa {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    max-height: 375px;
+    width: auto;
+    z-index: -1;
+}
+
+@media(max-width:576px) {
+    .j-santa {
+        display: none;
+    }
+
+    .j-instock {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    main {
+        max-width: 576px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .j-social {
+        padding: 20px;
+
+    }
+
+    .j-carousel {
+        max-width: 100%;
+    }
+}
+
+@media(min-width:576px) and (max-width:992px) {
+
+    .j-instock {
+
+        flex-wrap: wrap;
+    }
+
+    .j-instock>.card {
+        width: 50% !important;
+    }
+
+    .j-carousel {
+        max-width: 100%;
+    }
+}
