@@ -24,8 +24,11 @@ header {
     grid-row: 1/2;
 }
 
+
 .navbar {
     font-size: 20px;
+    font-weight: 700;
+    background-color: rgba(100,100,100,0.5);
     /*mix-blend-mode: color-burn;*/
 }
 
@@ -60,6 +63,11 @@ main {
     font-size: 40px;
     text-align: start;
     text-decoration: underline rgb(103, 143, 170);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background-color: rgba(100,100,100,0.5);
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
 
 .j-instock {
@@ -103,6 +111,7 @@ footer>section {
     justify-content: center;
     align-items: center;
     text-align: center;
+    border: 1px solid rgb(202, 202, 202);
 }
 
 footer>section>form {
@@ -110,6 +119,7 @@ footer>section>form {
     flex-direction: column;
     align-items: center;
     width: 80%;
+    margin-top: 10px;
 }
 
 footer>section>form>input,
@@ -118,13 +128,15 @@ form>button {
     box-sizing: border-box;
     margin-top: 10px;
     height: 30px;
+    margin-bottom: 20px;
 }
 
 footer form button {
     background-color: gray;
-    color: black;
+    color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
+    box-shadow: 2px 2px black;
 }
 
 footer>section img {
