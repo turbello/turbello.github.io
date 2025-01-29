@@ -1,170 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Opdracht 04</title>
-    <link rel="icon" type="image/x-icon" href="content/images/wannabekerstbal.jpg">
     <meta charset="UTF-8">
-    <meta name="author" content="[Bollaert Jonathan]">
-    <meta name="description"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae odio nec lorem cursus viverra vel eu leo. Donec faucibus eget risus sit amet dapibus.">
-    <meta name="keywords" content="Lorem, ipsum, dolor, sit, amet, consectetur, adipiscing">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="html/styles/student.css">
-    <link rel="stylesheet" href=" node_modules/bootstrap/dist/css/bootstrap.css">
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
 
+        .container {
+            margin-top: 20vh;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            font-size: 2.5em;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff4d4d;
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2em;
+            animation: floatUp 3s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Plaats je code hier! -->
-
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a href=""><img src="./html/content/images/logo.png" height="75px" width=auto></a>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item text-white">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Upcoming
-                                sales</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                            <a class="nav-link j-support" href="#">Support</a>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="j-border">
-
-        <main>
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="j-carousel" src="./html/content/images/Kerstbal1.jpg" 
-                            alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="j-carousel" src="./html/content/images/Kerstbal2.jpg" 
-                            alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="j-carousel" src="./html/content/images/Bruineshit.jpg" 
-                            alt="Third slide">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-            <section class="j-verkoopspraat">
-                <p>GOOD NEWS, BUY LESS PAY MORE!</p>
-            </section>
-
-            <section class="j-instock ">
-
-                <div class="card">
-                    <div class="card-header">
-                        2 kerstballen
-                    </div>
-
-                    <img src="./html/content/images/Kerstbal1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Niet één maar liefst 2 kerstballen voor de prijs van 10. Koop nu en verlies
-                            op zijn minst 5 euro.</p>
-                    </div>
-                    <div class="j-koopknop">
-                        <a href="#" class="btn btn-primary">€ 3.99</a>
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="card-header">
-                        4 kerstballen
-                    </div>
-                    <img src="./html/content/images/Kerstbal2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Niet één, twee of drie. Maar 4 keer zoveel verlies met 20 keer zo weinig
-                            kerstballen als dat je ze in de action koopt!</p>
-                    </div>
-                    <div class="j-koopknop">
-                        <a href="#" class="btn btn-primary">€ 8.99</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        Sneeuwpopjes
-                    </div>
-                    <img src="./html/content/images/Sneeuwpopjes.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Niet eetbare sneeuwpopjes. Wel, je kan ze één keer eten. Ik daag je uit</p>
-                    </div>
-                    <div class="j-koopknop">
-                        <a href="#" class="btn btn-primary">Gratis bij aankoop van 10 kerstballen </a>
-                    </div>
-                </div>
-
-
-            </section>
-        </main>
-
-        <aside>
-            <img class="j-hangbal col-3 " src="./html/content/images/HangendeballenALPHA.png">
-            <img class="j-santa" src="./html/content/images/Santa.png">
-        </aside>
-
-        <footer>
-            <section>
-                <p>&copy;Disclaimer. Onze juridische elfen proberen te voorkomen dat de Grinch onze juridische
-                    afdeling
-                    overneemt, maar we kunnen niet garanderen dat hij niet af en toe voor wat kerstchaos zorgt.
-                    Verder
-                    adviseren wij om geen peperkoekmannetjes als adviseurs te nemen, aangezien ze vaak een nogal
-                    kruimelig advies geven.
-                </p>
-            </section>
-            <section>
-                <form action="">
-                    <label for="id-inschrijven">Nieuwsbrief</label>
-                    <input type="text" naam="email" id="id-inschrijven" placeholder="Voer uw e-mailadres in" required>
-                    <button type="submit" naam="verzend">Inschrijven</button>
-                </form>
-            </section>
-            <section class="j-social">
-                <a href=""><img title="facebook" src="./html/content/images/fb.png" alt="facebook"></a>
-                <a href=""><img title="instagram" src="./html/content/images/insta.png" alt="instagram"></a>
-                <a href=""><img title="discord" src="./html/content/images/discord.png" alt="discord"></a>
-            </section>
-        </footer>
+    <div class="container">
+        <h1>Tetiana, will you be my Valentine? ❤️</h1>
+        <div class="buttons">
+            <button id="yesBtn">YES</button>
+            <button id="noBtn">NO</button>
+        </div>
+        <p id="message"></p>
     </div>
+    <script>
+        document.getElementById("noBtn").addEventListener("click", function () {
+            document.getElementById("message").textContent = "I think you mean yes, try again.";
+        });
 
+        document.getElementById("yesBtn").addEventListener("click", function () {
+            document.getElementById("message").textContent = "Yay! ❤️";
+            createHearts();
+        });
+
+        function createHearts() {
+            setInterval(() => {
+                let heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "❤️";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+                document.body.appendChild(heart);
+                setTimeout(() => {
+                    heart.remove();
+                }, 3000);
+            }, 300);
+        }
+    </script>
 </body>
-
-</html>
