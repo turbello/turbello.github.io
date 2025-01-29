@@ -6,6 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be My Valentine?</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            margin-top: 20vh;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            font-size: 2.5em;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff4d4d;
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2em;
+            animation: floatUp 3s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +78,28 @@
         </div>
         <p id="message"></p>
     </div>
-    <script src="script.js"></script>
-</body>
+    <script>
+        document.getElementById("noBtn").addEventListener("click", function () {
+            document.getElementById("message").textContent = "I think you mean yes, try again.";
+        });
 
-</html>
+        document.getElementById("yesBtn").addEventListener("click", function () {
+            document.getElementById("message").textContent = "Yay! ❤️";
+            createHearts();
+        });
+
+        function createHearts() {
+            setInterval(() => {
+                let heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "❤️";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+                document.body.appendChild(heart);
+                setTimeout(() => {
+                    heart.remove();
+                }, 3000);
+            }, 300);
+        }
+    </script>
+</body>
