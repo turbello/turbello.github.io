@@ -1,13 +1,13 @@
-document.getElementById("noBtn").addEventListener("mouseover", function (event) {
-    moveButton(event.target);
-});
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const message = document.getElementById("message");
 
-document.getElementById("noBtn").addEventListener("click", function () {
-    document.getElementById("message").textContent = "I think you mean yes, try again.";
+document.getElementById("noBtn").addEventListener("mouseover", function () {
+    moveButton(noBtn);
 });
 
 document.getElementById("yesBtn").addEventListener("click", function () {
-    document.getElementById("message").textContent = "Yay! ❤️";
+    message.textContent = "Yay! ❤️";
     createHearts();
 });
 
