@@ -1,3 +1,7 @@
+document.getElementById("noBtn").addEventListener("mouseover", function (event) {
+    moveButton(event.target);
+});
+
 document.getElementById("noBtn").addEventListener("click", function () {
     document.getElementById("message").textContent = "I think you mean yes, try again.";
 });
@@ -20,4 +24,12 @@ function createHearts() {
             heart.remove();
         }, 5000);
     }, 150);
+}
+
+function moveButton(button) {
+    let x = Math.random() * (window.innerWidth - button.offsetWidth);
+    let y = Math.random() * (window.innerHeight - button.offsetHeight);
+    button.style.position = "absolute";
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
 }
